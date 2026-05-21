@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<h1>Python学习笔记</h1>
+
+<div class="row">
+
+{% for note in notes %}
+
+<div class="col-md-4">
+
+    <div class="card mb-3">
+
+        <div class="card-body">
+
+            <h3>{{ note.title }}</h3>
+
+            <a href="/note/{{ note.id }}"
+            class="btn btn-primary">
+
+                查看笔记
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}
